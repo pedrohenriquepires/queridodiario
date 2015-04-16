@@ -62,7 +62,9 @@
 
 	<script>
 		var rodando = false;
+		var rotate = 0;
 		var interval;
+		localStorage['taFoda'] = parseInt(localStorage['taFoda']) || 0;
 
 		cheet('↑ ↑ ↓ ↓ ← → ← → b a', function () {
 			if(rodando){
@@ -78,11 +80,7 @@
 			rodando = !rodando;
 		});
 
-		localStorage['taFoda'] = parseInt(localStorage['taFoda']) || 0;
-
 		$('#fodalidade').html(localStorage['taFoda']);
-
-		var rotate = 0;
 
 		$('body').on('click', '#aumenta-fodalidade', function(){
 			aumentaFodalidade();
