@@ -80,12 +80,12 @@
 		var rotate = 0;
 
 		$('body').on('click', '#aumenta-fodalidade', function(){
-			rotate += 90;
-			$(this).css('transform', 'rotate('+rotate+'deg)');
 			aumentaFodalidade();
 		});
 
 		function aumentaFodalidade(){
+			rotate += 90;
+			$('#aumenta-fodalidade').css('transform', 'rotate('+rotate+'deg)');
 			localStorage['taFoda'] = parseInt(localStorage['taFoda']) + 1 || 0;
 			$('#fodalidade').html(localStorage['taFoda']);
 		}
