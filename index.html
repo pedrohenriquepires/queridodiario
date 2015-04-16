@@ -75,7 +75,7 @@
 				aumentaFodalidade();
 			}, 10);
 
-			rodando = rodando ? false : true;
+			rodando = !rodando;
 		});
 
 		localStorage['taFoda'] = parseInt(localStorage['taFoda']) || 0;
